@@ -8,17 +8,15 @@
     <color name="colorFirstSplashText">#212121</color>
     <color name="colorSecondSplashBackground">#FFFFFF</color>
 
-    <color name="colorTextRippleBackground">#151515</color>
-    <color name="colorTextRippleMain">#1BE62423</color>
+    <color name="colorTextRippleBackground">#FFFFFF</color>
+    <color name="colorTextRippleMain">#71ECEDED</color>
 
-    <color name="colorImageRippleBackground">#FDFDFD</color>
-    <color name="colorImageRippleMain">#E46868</color>
 
     <color name="colorMainPrice">#E62423</color>
-    <color name="colorMainTitle">#FFFFFF</color>
+    <color name="colorMainTitle">#151515</color>
     <color name="colorMainDescription">#999999</color>
     <color name="colorMainBackground">#ffffff</color>
-    <color name="colorCardViewBackground">#151515</color>
+    <color name="colorCardViewBackground">#FFFFFF</color>
 
 
     <color name="colorTransitionBackground">#000000</color>
