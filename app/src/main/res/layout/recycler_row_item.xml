@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:layout_margin="4dp"
-        android:background="@drawable/radius"
         app:cardElevation="3dp"
+        android:background="@color/colorCardViewBackground"
         app:cardUseCompatPadding="true">
 
         <LinearLayout
