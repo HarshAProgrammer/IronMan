@@ -59,4 +59,10 @@ public class FirstSplashScreenActivity extends AppCompatActivity {
             }
         }, FIRST_SPLASH_SCREEN_TIME);
     }
+
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

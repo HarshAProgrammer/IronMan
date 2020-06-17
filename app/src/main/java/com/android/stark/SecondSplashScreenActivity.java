@@ -33,4 +33,10 @@ public class SecondSplashScreenActivity extends AppCompatActivity {
             }
         }, SECOND_SPLASH_SCREEN_TIME);
     }
+
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

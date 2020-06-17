@@ -8,9 +8,16 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PowerManager;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView mRecyclerView;
     List<ProductData> myProductList;
     ProductData mProductData;
+
+    private long backPressedTime;
+    private LinearLayout mainLayout;
+
     HomeWatcher mHomeWatcher;
     private boolean mIsBound = false;
     private MusicService mServ;
@@ -51,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpUIViewsMainActivity() {
         mRecyclerView = (RecyclerView) findViewById(R.id.rvMainRecycler);
+        mainLayout = (LinearLayout) findViewById(R.id.LinLayoutMain);
     }
 
     private void loadMainData() {
@@ -259,5 +271,23 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
+            super.onBackPressed();
+            return;
+        } else {
+            Snackbar exitSnackbar = Snackbar.make(mainLayout, "Click Back again to Exit", Snackbar.LENGTH_LONG);
+            exitSnackbar.setDuration(10000);
+            exitSnackbar.setAnimationMode(BaseTransientBottomBar.ANIMATION_MODE_SLIDE);
+            View snackView = exitSnackbar.getView();
+            TextView tvExitSnack = snackView.findViewById(R.id.snackbar_text);
+            tvExitSnack.setTextColor(Color.RED);
+            exitSnackbar.show();
+        }
+        backPressedTime = System.currentTimeMillis();
     }
 }
