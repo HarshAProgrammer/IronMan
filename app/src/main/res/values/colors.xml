@@ -21,6 +21,8 @@
     <color name="colorMainBackground">#ffffff</color>
     <color name="colorCardViewBackground">#FFFFFF</color>
 
+    <color name="timelineBackground">#E62423</color>
+
 
     <color name="colorTransitionBackground">#000000</color>
 
