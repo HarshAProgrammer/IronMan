@@ -2,6 +2,8 @@ package com.android.stark;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
@@ -12,6 +14,7 @@ import android.widget.TextView;
 public class DetailActivity extends AppCompatActivity {
     TextView productDescription;
     ImageView productImage;
+    private Typeface detailDescriptionFont;
 
 
     @Override
@@ -24,6 +27,13 @@ public class DetailActivity extends AppCompatActivity {
         getInformationFromMain();
 
 
+    }
+
+    private void setUpUIViewsDetailActivity() {
+        productDescription = (TextView) findViewById(R.id.tvDetailDescription);
+        productImage = (ImageView) findViewById(R.id.ivDetailImage);
+        detailDescriptionFont = Typeface.createFromAsset(this.getAssets(), "fonts/Roboto-Regular.ttf");
+        productDescription.setTypeface(detailDescriptionFont);
     }
 
     private void setTransitionDialogue() {
@@ -39,11 +49,6 @@ public class DetailActivity extends AppCompatActivity {
     }
 
 
-    private void setUpUIViewsDetailActivity() {
-        productDescription = (TextView) findViewById(R.id.tvDetailDescription);
-        productImage = (ImageView) findViewById(R.id.ivDetailImage);
-    }
-
     private void getInformationFromMain() {
         Bundle mBundle = getIntent().getExtras();
         if (mBundle != null) {
@@ -52,5 +57,11 @@ public class DetailActivity extends AppCompatActivity {
 
 
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent openMainActivityFromDetail = new Intent(DetailActivity.this, MainActivity.class);
+        startActivity(openMainActivityFromDetail);
     }
 }
