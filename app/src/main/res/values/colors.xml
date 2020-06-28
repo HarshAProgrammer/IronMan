@@ -8,6 +8,9 @@
     <color name="colorFirstSplashText">#212121</color>
     <color name="colorSecondSplashBackground">#FFFFFF</color>
 
+    <color name="toolbarText">#E62423</color>
+    <color name="toolbarBackground">#FFFFFF</color>
+
     <color name="colorTextRippleBackground">#FFFFFF</color>
     <color name="colorTextRippleMain">#71868686</color>
 

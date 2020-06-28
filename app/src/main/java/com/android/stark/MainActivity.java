@@ -1,6 +1,8 @@
 package com.android.stark;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,6 +14,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PowerManager;
+import android.text.Layout;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -27,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
     List<ProductData> myProductList;
     ProductData mProductData;
 
+    private Toolbar toolbar;
+
     private long backPressedTime;
-    private LinearLayout mainLayout;
+    private CoordinatorLayout mainLayout;
 
     HomeWatcher mHomeWatcher;
     private boolean mIsBound = false;
@@ -51,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         setUpUIViewsMainActivity();
+        initToolbar();
         loadMainData();
 
         //Adding Background Music
@@ -61,8 +67,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setUpUIViewsMainActivity() {
+        toolbar = (Toolbar) findViewById(R.id.toolbarMainPage);
         mRecyclerView = (RecyclerView) findViewById(R.id.rvMainRecycler);
-        mainLayout = (LinearLayout) findViewById(R.id.LinLayoutMain);
+        mainLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayoutMain);
+    }
+
+    private void initToolbar() {
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Iron Man");
     }
 
     private void loadMainData() {
