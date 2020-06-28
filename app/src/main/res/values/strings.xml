@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Iron Man</string>
     <string name="first_splash_text">Consulting in the Future.</string>
+    <string name="first_splash_image">Stark Industries</string>
     <string name="second_splash_animation_description">Iron Man</string>
     <string name="armor_description">Armor Description</string>
     <string name="armor_detail_description">Armor Detail Description</string>
@@ -8,5 +9,5 @@
     <string name="armor_main_image">Armor Image</string>
     <string name="armor_name">Armor Name</string>
     <string name="armor_price">Armor Price</string>
-    <string name="splash_image_description">Stark Industries</string>
+
 </resources>

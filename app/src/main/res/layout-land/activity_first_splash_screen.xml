@@ -10,23 +10,23 @@
         android:id="@+id/image_splash_first"
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:src="@drawable/splashscreen"
-        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
-        android:contentDescription="@string/first_splash_image" />
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="70dp"
+        android:contentDescription="@string/first_splash_image"
+        android:src="@drawable/splashscreen" />
 
     <TextView
         android:id="@+id/text_splash_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/first_splash_text"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="150dp"
-        android:textColor="@color/colorFirstSplashText"
         android:layout_below="@+id/image_splash_first"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="150dp"
+        android:text="@string/first_splash_text"
+        android:textColor="@color/colorFirstSplashText"
         android:textSize="20sp" />
 
 
