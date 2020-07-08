@@ -10,6 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class FirstSplashScreenActivity extends AppCompatActivity {
 
 
@@ -56,6 +59,7 @@ public class FirstSplashScreenActivity extends AppCompatActivity {
                 Intent openSecondSplashActivityFromFirst = new Intent(FirstSplashScreenActivity.this, SecondSplashScreenActivity.class);
                 startActivity(openSecondSplashActivityFromFirst);
                 finish();
+                Animatoo.animateSlideUp(FirstSplashScreenActivity.this);
             }
         }, FIRST_SPLASH_SCREEN_TIME);
     }

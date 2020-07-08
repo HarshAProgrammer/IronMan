@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 
 public class DetailActivity extends AppCompatActivity {
@@ -63,5 +64,7 @@ public class DetailActivity extends AppCompatActivity {
     public void onBackPressed() {
         Intent openMainActivityFromDetail = new Intent(DetailActivity.this, MainActivity.class);
         startActivity(openMainActivityFromDetail);
+        finish();
+        Animatoo.animateSwipeRight(this);
     }
 }

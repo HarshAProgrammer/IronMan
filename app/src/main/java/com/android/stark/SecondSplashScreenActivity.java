@@ -7,6 +7,8 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class SecondSplashScreenActivity extends AppCompatActivity {
 
 
@@ -30,6 +32,7 @@ public class SecondSplashScreenActivity extends AppCompatActivity {
                 Intent openMainActivityFromSecondSplash = new Intent(SecondSplashScreenActivity.this, MainActivity.class);
                 startActivity(openMainActivityFromSecondSplash);
                 finish();
+                Animatoo.animateSlideUp(SecondSplashScreenActivity.this);
             }
         }, SECOND_SPLASH_SCREEN_TIME);
     }
