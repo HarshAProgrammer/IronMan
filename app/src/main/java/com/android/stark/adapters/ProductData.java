@@ -1,4 +1,4 @@
-package com.android.stark;
+package com.android.stark.adapters;
 
 public class ProductData {
     private final String productName;

@@ -1,4 +1,4 @@
-package com.android.stark;
+package com.android.stark.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.stark.R;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 public class SecondSplashScreenActivity extends AppCompatActivity {

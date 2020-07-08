@@ -1,8 +1,10 @@
-package com.android.stark;
+package com.android.stark.activities;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.view.LayoutInflater;
+
+import com.android.stark.R;
 
 class TransitionDialogue {
     private AlertDialog dialogue;

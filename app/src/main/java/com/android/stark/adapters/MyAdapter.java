@@ -1,4 +1,4 @@
-package com.android.stark;
+package com.android.stark.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.stark.R;
+import com.android.stark.activities.DetailActivity;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 import java.util.List;
@@ -50,6 +52,7 @@ public class MyAdapter extends RecyclerView.Adapter<ProductViewHolder> {
             @Override
             public void onClick(View v) {
                 Intent openDetailActivityFromMContext = new Intent(mContext, DetailActivity.class);
+                openDetailActivityFromMContext.putExtra("Name", myProductList.get(productViewHolder.getAdapterPosition()).getProductName());
                 openDetailActivityFromMContext.putExtra("Image", myProductList.get(productViewHolder.getAdapterPosition()).getProductImage());
                 openDetailActivityFromMContext.putExtra("Description", myProductList.get(productViewHolder.getAdapterPosition()).getProductDescription());
                 mContext.startActivity(openDetailActivityFromMContext);

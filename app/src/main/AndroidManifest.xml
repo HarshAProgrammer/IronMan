@@ -10,24 +10,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TimelineActivity">
+        <activity android:name=".activities.TimelineActivity">
+
+        </activity>
+
+        <service
+            android:name=".activities.MusicService"
+            android:enabled="true" />
+
+        <activity android:name=".activities.FirstSplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <service
-            android:name=".MusicService"
-            android:enabled="true" />
-
-        <activity android:name=".FirstSplashScreenActivity">
-
-        </activity>
-        <activity android:name=".SecondSplashScreenActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".DetailActivity" />
+        <activity android:name=".activities.SecondSplashScreenActivity" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.DetailActivity" />
     </application>
 
 </manifest>

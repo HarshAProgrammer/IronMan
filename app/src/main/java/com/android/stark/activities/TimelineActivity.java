@@ -1,11 +1,11 @@
-package com.android.stark;
+package com.android.stark.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import android.graphics.Color;
 import android.os.Bundle;
 
+import com.android.stark.R;
 import com.baoyachi.stepview.VerticalStepView;
 
 import java.util.ArrayList;

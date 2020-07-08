@@ -1,69 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorDetailDescriptionBackground"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:scrollbars="vertical"
     tools:context=".activities.DetailActivity">
 
-    <LinearLayout
-        android:id="@+id/imgDetailArmor"
-        android:layout_width="400dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/linLayDetail2"
+
+    <ImageView
+        android:id="@+id/ivDetailImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/armor_detail_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splashscreen"
+        app:layout_constraintBottom_toTopOf="@+id/linLayDetail2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.dmallcott.dismissibleimageview.DismissibleImageView
-            android:id="@+id/ivDetailImage"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_weight="4"
-            android:contentDescription="@string/armor_detail_image"
-            android:scaleType="centerCrop"
-            android:src="@drawable/splashscreen" />
-
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linLayDetail1"
         android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:background="@color/colorDetailTitleBackground"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/linLayDetail2"
+        android:layout_height="wrap_content"
+        android:background="@drawable/description_title_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/ivDetailImage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imgDetailArmor"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/tvDetailName"
+            android:id="@+id/tvDetailTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Iron Man Armor Name"
-            android:textColor="@color/colorDetailTitleText"
+            android:padding="32dp"
+            android:text="Rolex Watch Name"
+            android:textColor="@android:color/background_dark"
             android:textSize="22sp" />
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/linLayDetail2"
         android:layout_width="0dp"
-        android:layout_height="370dp"
-        android:layout_weight="1.5"
-        android:baselineAligned="false"
-        android:weightSum="2"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imgDetailArmor"
-        app:layout_constraintTop_toBottomOf="@id/linLayDetail1">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
 
         <ScrollView
             android:layout_width="match_parent"

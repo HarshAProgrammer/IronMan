@@ -1,4 +1,4 @@
-package com.android.stark;
+package com.android.stark.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,10 +9,13 @@ import android.os.Handler;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.stark.R;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 
 public class DetailActivity extends AppCompatActivity {
+
+    TextView productName;
     TextView productDescription;
     ImageView productImage;
     private Typeface detailDescriptionFont;
@@ -31,6 +34,7 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void setUpUIViewsDetailActivity() {
+        productName = (TextView) findViewById(R.id.tvDetailName);
         productDescription = (TextView) findViewById(R.id.tvDetailDescription);
         productImage = (ImageView) findViewById(R.id.ivDetailImage);
         detailDescriptionFont = Typeface.createFromAsset(this.getAssets(), "fonts/Roboto-Regular.ttf");
@@ -53,6 +57,7 @@ public class DetailActivity extends AppCompatActivity {
     private void getInformationFromMain() {
         Bundle mBundle = getIntent().getExtras();
         if (mBundle != null) {
+            productName.setText(mBundle.getString("Name"));
             productDescription.setText(mBundle.getString("Description"));
             productImage.setImageResource(mBundle.getInt("Image"));
 
@@ -62,8 +67,6 @@ public class DetailActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent openMainActivityFromDetail = new Intent(DetailActivity.this, MainActivity.class);
-        startActivity(openMainActivityFromDetail);
         finish();
         Animatoo.animateSwipeRight(this);
     }

@@ -27,8 +27,10 @@
     <color name="colorTransitionBackground">#000000</color>
 
 
-    <color name="colorDetailDescription">#FFFFFF</color>
-    <color name="colorDetailBackground">#E62429</color>
+    <color name="colorDetailDescriptionText">#FFFFFF</color>
+    <color name="colorDetailTitleText">#FFFFFF</color>
+    <color name="colorDetailDescriptionBackground">#E62429</color>
+    <color name="colorDetailTitleBackground">#E62429</color>
 
 
 </resources>

@@ -1,4 +1,4 @@
-package com.android.stark;
+package com.android.stark.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -14,11 +14,13 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PowerManager;
-import android.text.Layout;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.android.stark.HomeWatcher;
+import com.android.stark.adapters.MyAdapter;
+import com.android.stark.adapters.ProductData;
+import com.android.stark.R;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
