@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="32dp"
-            android:text="Rolex Watch Name"
+            android:text="Armor Name"
             android:textColor="@android:color/background_dark"
             android:textSize="22sp" />
     </LinearLayout>
